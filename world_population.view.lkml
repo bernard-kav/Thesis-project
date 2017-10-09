@@ -1,4 +1,50 @@
 view: world_population {
+  sql_table_name: Terror_and_Gun_Crime.world_population_v1;;
+
+  dimension: Rank {
+    type: number
+    sql: %${TABLE}.rank ;;
+  }
+  dimension: Country {
+    type: string
+    sql: %${TABLE}.country ;;
+  }
+  dimension: Total_population {
+    type: number
+    sql: %${TABLE}.total_population ;;
+  }
+  dimension: Yearly_Change {
+    type: number
+    value_format: "percent"
+    sql: %${TABLE}.yearly_change ;;
+  }
+  dimension: Net_Change {
+    type: number
+    value_format: "percent"
+    sql: %${TABLE}.net_change ;;
+  }
+  dimension: Land_mass_km {
+    type: number
+    sql: %${TABLE}.land_mass_km ;;
+  }
+  dimension: Fertility_rate {
+    type: string
+    sql: %${TABLE}.fertility_rate ;;
+  }
+  dimension: Median_age {
+    type: string
+    sql: %${TABLE}.median_age ;;
+  }
+  dimension: Urban_population {
+    type: string
+    sql: %${TABLE}.urban_population ;;
+  }
+  dimension: World_Share {
+    type: number
+    value_format: "percent"
+    sql: %${TABLE}.world_Share ;;
+  }
+
   # # You can specify the table name if it's different from the view name:
   # sql_table_name: my_schema_name.tester ;;
   #
